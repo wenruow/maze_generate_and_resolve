@@ -1,5 +1,4 @@
-import maze
-import generate_maze
+from maze import generate_maze,maze
 import sys
 import random
 from collections import deque
@@ -7,7 +6,6 @@ from collections import deque
 
 # Solve maze using Pre-Order DFS algorithm, terminate with solution
 def solve_dfs(current_maze):
-    # TODO: Implement solve_dfs
     cell_stack = []
     current_cell = 0
     visited_cell = 0
@@ -60,8 +58,9 @@ def main(solver='bfs'):
         solve_dfs(current_maze)
     elif solver == 'bfs':
         solve_bfs(current_maze)
-    while 1:
-        maze.check_for_exit()
+    # while 1:
+    #     maze.check_for_exit()
+    current_maze.close_window()
     return
 
 

@@ -224,6 +224,8 @@ class Maze:
                          SCREEN_SIZE[0] - CELL_SIZE, SCREEN_SIZE[1] -
                          CELL_SIZE, CELL_SIZE, CELL_SIZE))
 
+    def close_window(self):
+        pygame.display.quit()
 
 def check_for_exit():
     # Aims for 60fps, checks for events.
